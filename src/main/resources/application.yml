@@ -1,9 +1,12 @@
 spring:
 #  profiles:
 #    active:
+  output:
+    ansi:
+      enabled: always
   batch:
     job:
-      names: ${job.name:NONE}
+      names: ${job.name:helloWorldJob}
     jdbc:
       initialize-schema: ALWAYS
   datasource:
@@ -17,6 +20,6 @@ logging:
   #  pattern:
   #    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
   level:
-    yejin.site : DEBUG
+    com.ll.exam : DEBUG
     # springframework: DEBUG
 
